@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService{
         if (existUser==null)throw new BadRequestException(String.format("User Not Found with Id:%s",userId));
         existUser.setFirstName(userRequestDto.getFirstName());
         existUser.setLastName(userRequestDto.getLastName());
-        return userRepository.findById(userId);
+        return userRepository.findById(userId, UserDto.class);
     }
 
     @Override

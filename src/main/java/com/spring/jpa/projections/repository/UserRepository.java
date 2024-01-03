@@ -13,7 +13,4 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 
     <T> T findById(int id, Class<T> type);
 
-    UserDto findById(int userId);
-
-
 }
